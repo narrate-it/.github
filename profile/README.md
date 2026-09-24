@@ -1,16 +1,30 @@
-# narrate-it
+# Narrate
 
-We build narrate, a small set of tools that help CLI agents speak only when it matters.
+Narrate is a small suite of voice tools for people who build with CLI agents.
+Turn a document into narrated audio, or let an agent speak concise updates at
+meaningful milestones.
 
 ## Projects
 
-- [narrate](https://github.com/narrate-it/narrate) turns documents into spoken audio and emits phase-based progress.
-- [narrate-cursor](https://github.com/narrate-it/narrate-cursor) adds Cursor project commands for `/narrate` and `/narrate-stream`.
-- [narrate-claude-code](https://github.com/narrate-it/narrate-claude-code) adds Claude Code MCP prompts for concise and streaming narration.
-- [narrate-codex](https://github.com/narrate-it/narrate-codex) packages the Codex plugin for narration prompts.
+- [Narrate CLI](https://github.com/narrate-it/narrate) turns documents into
+  spoken scripts and audio, with Pocket TTS, local macOS speech, and verified
+  release downloads.
+- [Narrate for Codex](https://github.com/narrate-it/narrate-codex) adds concise
+  and streaming progress prompts.
+- [Narrate for Cursor](https://github.com/narrate-it/narrate-cursor) adds
+  project commands for phase-aware narration.
+- [Narrate for Claude Code](https://github.com/narrate-it/narrate-claude-code)
+  adds narration prompts through a plugin.
 
-## Install paths
+## Install the CLI
 
-- Cursor: `./install.sh /path/to/project`
-- Claude Code: `./install.sh`
-- Codex: `./install.sh`
+- **Homebrew:** `brew install narrate-it/narrate/narrate`
+- **Debian and Ubuntu:** download the matching `.deb` from the
+  [latest release](https://github.com/narrate-it/narrate/releases/latest) and
+  install it with `sudo apt install ./narrate_*.deb`. For unattended apt
+  upgrades, see the [signed feed setup](https://github.com/narrate-it/narrate/blob/main/docs/package-release-setup.md).
+- **Coding agent:** follow the
+  [online install instructions](https://github.com/narrate-it/narrate#install).
+
+Use `--verbatim` to speak text without sending it for AI rewriting. On
+macOS, `--tts=native` synthesizes speech locally.
